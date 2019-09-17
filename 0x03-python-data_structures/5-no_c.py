@@ -11,4 +11,4 @@ def no_c(my_string):
         if x == 'C':
             new_string.remove('C')
         counter += 1;
-    return new_string
+    return (''.join(new_string))
