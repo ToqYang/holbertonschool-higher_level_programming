@@ -1,0 +1,1 @@
+File contain advances about classes
