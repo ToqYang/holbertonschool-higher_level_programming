@@ -10,5 +10,5 @@ class Square:
         self.__size = size
 
     def area(self):
-         """ Return area of a square """
+        """ Return area of a square """
         return self.__size * self.__size
