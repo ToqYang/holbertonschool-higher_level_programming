@@ -30,8 +30,7 @@ class Square:
     def size(self, value):
         """
         Setter property
-        value: Variable for verify correct value
-                                             """
+        value: Variable for verify correct value"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         else:
@@ -46,11 +45,10 @@ class Square:
         return self.__position
  
     @position.setter
-    """
-        Setter property
-        value: Variable for verify correct value
-                                       """
     def position(self, value):
+        """                                                           Setter property
+           value: Variable for verify correct value"""
+
         if (type(value) is not tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         elif len(value) is not 2:
