@@ -1,0 +1,28 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+	>>> say_my_name("Santiago", "Yanguas")
+	My name is Santiago Yanguas
+
+	>>> say_my_name("Mother")
+	My name is Mother 
+
+	>>> say_my_name(42, "Holberton")
+	Traceback (most recent call last):
+                  ...
+        TypeError: first_name must be a string
+
+	>>> say_my_name("Holberton", 42)
+	Traceback (most recent call last):
+                  ...
+        TypeError: last_name must be a string
+
+	>>> say_my_name("Hello", "World", "Uno")
+	Traceback (most recent call last):
+        	  ...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
