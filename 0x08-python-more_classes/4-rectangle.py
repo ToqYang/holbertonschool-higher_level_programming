@@ -26,7 +26,7 @@ class Rectangle:
         return rect_draw
 
     def __repr__(self):
-        return ("Rectangle({:d},{:d})".format(self.__width, self.__height))
+        return "Rectangle(" + str(self.width) + "," + str(self.height) + ")"
 
     @property
     def width(self):
@@ -71,6 +71,9 @@ class Rectangle:
         The ecuations for recatangle is:
         A_Rectangle = Height * width
         """
+        if self.width == 0 or self.height == 0:
+            return 0
+
         return self.height * self.width
 
     def perimeter(self):
