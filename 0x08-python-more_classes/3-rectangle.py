@@ -13,6 +13,9 @@ class Rectangle:
         """
         rect_draw = ""
 
+        if self.width == 0 or self.height == 0:
+            return rect_draw
+
         for x in range(0, self.height):
             rect_draw += "#" * self.width
 
@@ -57,7 +60,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        elif:
+        else:
             self.__height = value
 
     def area(self):
