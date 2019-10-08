@@ -26,7 +26,7 @@ class Rectangle:
         return rect_draw
 
     def __repr__(self):
-        return ("Rectangle({},{})".format(self.width, self.height))
+        return ("Rectangle({},{})".format(self.__width, self.__height))
 
     @property
     def width(self):
