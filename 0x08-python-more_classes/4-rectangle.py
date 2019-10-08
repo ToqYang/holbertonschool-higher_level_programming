@@ -20,8 +20,7 @@ class Rectangle:
             rect_draw += "#" * self.width
 
             if x >= self.height - 1:
-                continue
-            rect_draw += "\n"
+                rect_draw += "\n"
 
         return rect_draw
 
