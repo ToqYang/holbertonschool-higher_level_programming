@@ -8,6 +8,7 @@ class Rectangle:
         self.height = height
 
     def __del__(self):
+        """ Destructor of the class """
         print("Bye rectangle...")
 
     def __str__(self):
