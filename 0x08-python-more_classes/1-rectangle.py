@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 class Rectangle:
     """ Make a empty class """
     def __init__(self, width=0, height=0):
