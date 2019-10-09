@@ -1,0 +1,1 @@
+File contain technical question about phyton
