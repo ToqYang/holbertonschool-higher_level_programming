@@ -1,0 +1,18 @@
+The ``1-print_square`` module
+======================
+
+Using ``print_sorted``
+-------------------
+
+	>>> MyList = __import__('1-my_list').MyList
+
+	>>> MyList.print_sorted([0, 1, 4, 5])
+	[0, 1, 4, 5]
+
+	>>> MyList.print_sorted([-10, -20, -1, 1, -5])
+	[-20, -10, -5, -1, 1]
+
+	>>> MyList.print_sorted()
+	Traceback (most recent call last):
+		  ...
+	TypeError: print_sorted() missing 1 required positional argument: 'self'
