@@ -1,0 +1,32 @@
+The ``7-base_geometry.txt`` module
+======================
+
+Using ``Integer validate``
+-------------------
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+	>>> BaseGeometry.integer_validator(BaseGeometry, "my_int", "Holberton")
+	Traceback (most recent call last):
+		  ...
+	TypeError: my_int must be an integer
+
+	>>> BaseGeometry.integer_validator(BaseGeometry, "my_int", -13)
+	Traceback (most recent call last):
+		  ...
+	ValueError: my_int must be greater than 0
+
+	>>> BaseGeometry.integer_validator(BaseGeometry, "my_int", 13, 0)
+	Traceback (most recent call last):
+		  ...
+	TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+	>>> BaseGeometry.integer_validator(BaseGeometry, "my_int")
+	Traceback (most recent call last):
+		  ...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> BaseGeometry.integer_validator(BaseGeometry)
+	Traceback (most recent call last):
+		  ...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
