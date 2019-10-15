@@ -1,1 +1,0 @@
-Advances about inheritance
