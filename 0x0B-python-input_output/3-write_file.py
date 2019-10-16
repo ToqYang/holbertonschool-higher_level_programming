@@ -8,5 +8,4 @@ def write_file(filename="", text=""):
         String = text
     """
     with open(filename, mode="w", encoding="utf-8") as fil:
-        width_char = fil.write(text)
-    return width_char
+        return fil.write(text)
