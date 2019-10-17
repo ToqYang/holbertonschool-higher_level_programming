@@ -17,7 +17,7 @@ class Student:
         """ Return dictionary description in Dictionary
             verify if sype is str, then return only list
             otherwise return all dictionary of the class"""
-        if type(attrs) == str:
-            return self.__dict__(attrs)
-        else:
-            return self.__dict__
+        if (type(attrs) == list and all(type(element) == str
+                                        for element in attrs)):
+            return {j: getattr(self, j) for j in attrs if hasattr(self, j)}
+        return self.__dict__
