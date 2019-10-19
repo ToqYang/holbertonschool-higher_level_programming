@@ -108,3 +108,8 @@ class Rectangle(Base):
                   Area of a rectangle
         """
         return self.width * self.height
+
+    def display(self):
+        """ Represent of manner graphical the HxW with # """
+        for x in range(self.height):
+            print("#" * self.width)
