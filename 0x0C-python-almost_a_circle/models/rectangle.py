@@ -1,0 +1,65 @@
+#!/usr/bin/python3
+"""  Module that Use the class base for make a Rectangle """
+from models.base import Base
+
+
+class Rectangle(Base):
+    """ Make the base class of a Rectangle """
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """ Constructor of the class Rectangle
+
+            Args:
+                width = Amplitude of the Rectangle
+                height = Ceil of the hight of the Rectangle
+                x = Coordinates in x (Horizontal)
+                y = Coordinates in y (Vertical)
+                id = Number identifier of the object
+        """
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        super().__init__(id)
+
+    # Dimensions of the Rectangle
+    @property
+    def width(self):
+        """ Get the value of the width """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """ Set the value of the variable width """
+        self.__width = value
+
+    @property
+    def height(self):
+        """ Get the value of the height """
+        return self.__height
+
+    @width.setter
+    def height(self, value):
+        """ Set the value of the variable height """
+        self.__height = value
+
+    # Positions of the Rectangle
+    @property
+    def x(self):
+        """ Get the value of the x """
+        return self.__x
+
+    @width.setter
+    def x(self, value):
+        """ Set the value of the variable x """
+        self.__x = value
+
+    @property
+    def y(self):
+        """ Get the value of the y """
+        return self.__y
+
+    @width.setter
+    def y(self, value):
+        """ Set the value of the variable y """
+        self.__y = value
