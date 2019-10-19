@@ -110,8 +110,18 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """ Represent of manner graphical the HxW with # """
+        """ Represent of manner graphical the HxW with #
+            and print about the position
+
+            Loops:
+                 1) Print the  position in y
+                 2) Print the position in x, after print the #
+        """
+        for i in range(0, self.y):
+            print()
+
         for x in range(self.height):
+            print(" " * self.x, end="")
             print("#" * self.width)
 
     def __str__(self):
