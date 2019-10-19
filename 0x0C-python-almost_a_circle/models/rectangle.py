@@ -30,7 +30,16 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """ Set the value of the variable width """
+        """ Set the value of the variable width
+
+            Args:
+                value (int): Receive the value and after the filter
+        """
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+
         self.__width = value
 
     @property
@@ -38,9 +47,18 @@ class Rectangle(Base):
         """ Get the value of the height """
         return self.__height
 
-    @width.setter
+    @height.setter
     def height(self, value):
-        """ Set the value of the variable height """
+        """ Set the value of the variable height
+
+            Args:
+                value (int): Receive the value and after the filter
+        """
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+
         self.__height = value
 
     # Positions of the Rectangle
@@ -49,9 +67,18 @@ class Rectangle(Base):
         """ Get the value of the x """
         return self.__x
 
-    @width.setter
+    @x.setter
     def x(self, value):
-        """ Set the value of the variable x """
+        """ Set the value of the variable x
+
+            Args:
+                value (int): Receive the value and after the filter
+        """
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+
         self.__x = value
 
     @property
@@ -59,7 +86,16 @@ class Rectangle(Base):
         """ Get the value of the y """
         return self.__y
 
-    @width.setter
+    @y.setter
     def y(self, value):
-        """ Set the value of the variable y """
+        """ Set the value of the variable y
+
+            Args:
+                value (int): Receive the value and after the filter
+        """
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+
         self.__y = value
