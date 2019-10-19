@@ -113,3 +113,10 @@ class Rectangle(Base):
         """ Represent of manner graphical the HxW with # """
         for x in range(self.height):
             print("#" * self.width)
+
+    def __str__(self):
+        """ Print for the user
+            [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        return "[Rectangle] (" + str(self.id) + ") " + str(self.x) + "/"\
+            + str(self.y) + " - " + str(self.width) + "/" + str(self.height)
