@@ -133,13 +133,18 @@ class Rectangle(Base):
         return "[Rectangle] (" + str(self.id) + ") " + str(self.x) + "/"\
             + str(self.y) + " - " + str(self.width) + "/" + str(self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Receive all arguments of the class
 
             Args:
                 *args: Receive no-keyword argument and the store
+                       - With set attribute compare with a list and
+                         we set the attributes in args
 
-            With set attribute compare with a list and we set the attributes
+        **kwargs: Dictionary with keys and values
+                  - Throught of a loop, We travel in the key
+                    after in the value of his value
+                    after, we with setattr, we set the values
         """
         my_attr = ["id", "width", "height", "x", "y"]
         count = 0
@@ -147,3 +152,6 @@ class Rectangle(Base):
         for arg in args:
             setattr(self, my_attr[count], arg)
             count += 1
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
