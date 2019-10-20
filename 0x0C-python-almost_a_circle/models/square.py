@@ -39,6 +39,7 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    # Print features of the class
     def __str__(self):
         """ Print for the user
 
@@ -47,3 +48,27 @@ class Square(Rectangle):
         """
         return "[Square] (" + str(self.id) + ") " + str(self.x) + "/"\
             + str(self.y) + " - " + str(self.height)
+
+    # Print attributes more easiest
+    def update(self, *args, **kwargs):
+        """ Receive all arguments of the class
+
+            Args:
+                *args: Receive no-keyword argument and the store
+                       - With set attribute compare with a list and
+                         we set the attributes in args
+
+            **kwargs: Dictionary with keys and values
+                     - Throught of a loop, We travel in the key
+                       after in the value of his value
+                       after, we with setattr, we set the values
+        """
+        my_attr = ["id", "size", "x", "y"]
+        count = 0
+
+        for arg in args:
+            setattr(self, my_attr[count], arg)
+            count += 1
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
