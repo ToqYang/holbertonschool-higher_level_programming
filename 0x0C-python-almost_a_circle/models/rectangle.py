@@ -109,6 +109,7 @@ class Rectangle(Base):
         """
         return self.width * self.height
 
+    # Print #
     def display(self):
         """ Represent of manner graphical the HxW with #
             and print about the position
@@ -124,6 +125,7 @@ class Rectangle(Base):
             print(" " * self.x, end="")
             print("#" * self.width)
 
+    # Print attributes of the class
     def __str__(self):
         """ Print for the user
 
@@ -133,6 +135,7 @@ class Rectangle(Base):
         return "[Rectangle] (" + str(self.id) + ") " + str(self.x) + "/"\
             + str(self.y) + " - " + str(self.width) + "/" + str(self.height)
 
+    # Print attributes more easiest
     def update(self, *args, **kwargs):
         """ Receive all arguments of the class
 
