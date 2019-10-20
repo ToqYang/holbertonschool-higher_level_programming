@@ -22,6 +22,23 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
+    # Dimensions of a Square
+    @property
+    def size(self):
+        """ Get the value of the size """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """ Set the value of the variable size
+
+            Args:
+                value (int): Receive the value and after the filter
+                the methods width and height
+        """
+        self.width = value
+        self.height = value
+
     def __str__(self):
         """ Print for the user
 
