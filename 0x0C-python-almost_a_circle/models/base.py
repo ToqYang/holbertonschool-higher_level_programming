@@ -1,5 +1,6 @@
 #!/bin/usr/python3
 """ Base class """
+import json
 
 
 class Base:
@@ -27,3 +28,18 @@ class Base:
         if id is not None:
             # Otherwise assign the value received
             self.id = id
+
+    # Convert Json to string
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """ Convert JSON to a string readable
+
+        Args:
+            list_dictionaries: Bring the dictionary of the class converted
+
+        Return:
+           JSON string representation of that class
+        """
+        if not list_dictionaries or list_dictionaries is None:
+            return "[]"
+        return json.dumps(list_dictionaries)
