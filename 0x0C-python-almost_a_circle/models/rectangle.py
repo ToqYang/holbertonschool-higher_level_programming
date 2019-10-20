@@ -126,7 +126,24 @@ class Rectangle(Base):
 
     def __str__(self):
         """ Print for the user
-            [Rectangle] (<id>) <x>/<y> - <width>/<height>
+
+            Return:
+                  [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
         return "[Rectangle] (" + str(self.id) + ") " + str(self.x) + "/"\
             + str(self.y) + " - " + str(self.width) + "/" + str(self.height)
+
+    def update(self, *args):
+        """ Receive all arguments of the class
+
+            Args:
+                *args: Receive no-keyword argument and the store
+
+            With set attribute compare with a list and we set the attributes
+        """
+        my_attr = ["id", "width", "height", "x", "y"]
+        count = 0
+
+        for arg in args:
+            setattr(self, my_attr[count], arg)
+            count += 1
