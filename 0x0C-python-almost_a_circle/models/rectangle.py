@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """  Module that Use the class base for make a Rectangle """
 from models.base import Base
-from pdb import set_trace
 
 
 class Rectangle(Base):
@@ -168,7 +167,6 @@ class Rectangle(Base):
            id, width, height, x, y
         """
         my_attri = ["id", "width", "height", "x", "y"]
-        obj_my_class = self.__dict__
         val_attr = 0
         dic_ret = {}
 
