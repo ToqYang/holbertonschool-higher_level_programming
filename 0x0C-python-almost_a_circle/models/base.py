@@ -67,3 +67,21 @@ class Base:
             json_str = cls.to_json_string(new_list)
 
             fil.write(json_str)
+
+    # Json string to dict
+    def from_json_string(json_string):
+        """ Convert the Json to string and verify if is empty or None
+
+        Args:
+            json_string: Received a list of dictionary of attributes
+
+        Return:
+           List represented by json_string
+        """
+        new_list = []
+
+        if not json_string or json_string is None:
+            return new_list
+
+        new_list.append(json_string)
+        return new_list
