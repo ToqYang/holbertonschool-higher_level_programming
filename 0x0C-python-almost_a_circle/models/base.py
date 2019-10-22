@@ -86,7 +86,8 @@ class Base:
         new_list.append(json_string)
         return new_list
 
-    # Dcitionary instance
+    # Dictionary instance
+    @classmethod
     def create(cls, **dictionary):
         """ Make a dictionary based in the instance
 
@@ -97,7 +98,11 @@ class Base:
         Return:
            All attributes passed
         """
+        my_ins = cls(10, 9, 8, 6)
+        my_ins.update(**dictionary)
+        return my_ins
 
+    # Load a file
     def load_from_file(cls):
         """ Load a file with the information of the instance
 
@@ -107,3 +112,5 @@ class Base:
         Return:
            Information with a list of instances
         """
+        filename = cls.__name__ + ".json"
+        new_list = []
