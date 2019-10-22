@@ -1,6 +1,7 @@
 #!/bin/usr/python3
 """ Base class """
 import json
+import os.path as path
 
 
 class Base:
@@ -69,6 +70,7 @@ class Base:
             fil.write(json_str)
 
     # Json string to dict
+    @staticmethod
     def from_json_string(json_string):
         """ Convert the Json to string and verify if is empty or None
 
@@ -83,7 +85,7 @@ class Base:
         if not json_string or json_string is None:
             return new_list
 
-        new_list.append(json_string)
+        new_list = json.loads(json_string)
         return new_list
 
     # Dictionary instance
@@ -103,6 +105,7 @@ class Base:
         return my_ins
 
     # Load a file
+    @classmethod
     def load_from_file(cls):
         """ Load a file with the information of the instance
 
@@ -114,3 +117,16 @@ class Base:
         """
         filename = cls.__name__ + ".json"
         new_list = []
+
+        if path.exists(filename) is False:
+            return new_list
+        else:
+            with open(filename, "r") as fil:
+                my_fil = fil.read()
+
+            json_dic_string = Base.from_json_string(my_fil)
+
+            for data in json_dic_string:
+                new_list.append(cls.create(**data))
+
+            return new_list
