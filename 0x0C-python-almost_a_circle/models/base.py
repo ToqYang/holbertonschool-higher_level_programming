@@ -15,7 +15,7 @@ class Base:
     id = 0
 
     def __init__(self, id=None):
-        """ Constructor of the base class
+        """ __init__ Constructor of the base class
 
             self = Is the object that already make the class
             id = Is a identifier of the object

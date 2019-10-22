@@ -7,7 +7,7 @@ class Rectangle(Base):
     """ Make the base class of a Rectangle """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Constructor of the class Rectangle
+        """ __init__ Constructor of the class Rectangle
 
             Args:
                 width = Amplitude of the Rectangle
@@ -127,7 +127,7 @@ class Rectangle(Base):
 
     # Print attributes of the class
     def __str__(self):
-        """ Print for the user
+        """ __str__ Print for the user
 
             Return:
                   [Rectangle] (<id>) <x>/<y> - <width>/<height>

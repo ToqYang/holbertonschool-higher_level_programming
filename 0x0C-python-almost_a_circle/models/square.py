@@ -11,7 +11,7 @@ class Square(Rectangle):
             Rectangle (Class): Class that inherits the attributes and methods
     """
     def __init__(self, size, x=0, y=0, id=None):
-        """ Constructor that call to Rectangle class
+        """ __init__ Constructor that call to Rectangle class
             for initialize the values
 
         Args:
@@ -41,7 +41,7 @@ class Square(Rectangle):
 
     # Print features of the class
     def __str__(self):
-        """ Print for the user
+        """ __str__ Print for the user
 
             Return:
                   [Square] (<id>) <x>/<y> - <size>
