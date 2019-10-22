@@ -144,10 +144,10 @@ class Rectangle(Base):
                        - With set attribute compare with a list and
                          we set the attributes in args
 
-        **kwargs: Dictionary with keys and values
-                  - Throught of a loop, We travel in the key
-                    after in the value of his value
-                    after, we with setattr, we set the values
+                 **kwargs: Dictionary with keys and values
+                          - Throught of a loop, We travel in the key
+                            after in the value of his value
+                            after, we with setattr, we set the values
         """
         my_attr = ["id", "width", "height", "x", "y"]
         count = 0
