@@ -62,7 +62,7 @@ class Base:
             for x in list_objs:
                 new_list.append(x.to_dictionary())
 
-            json_str = cls.to_json_string(new_list)
+        json_str = cls.to_json_string(new_list)
 
         with open(filename, "w") as fil:
             fil.write(json_str)
