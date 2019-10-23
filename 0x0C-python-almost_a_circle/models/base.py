@@ -57,7 +57,7 @@ class Base:
         filename = cls.__name__ + ".json"
         new_list = []
 
-        if list_objs is not None:
+        if list_objs:
 
             for x in list_objs:
                 new_list.append(x.to_dictionary())
@@ -98,8 +98,13 @@ class Base:
         Return:
            All attributes passed
         """
-        my_ins = cls(10, 9, 8, 6)
+        if cls.__name__ == "Rectangle":
+            my_ins = cls(10, 9)
+        elif cls.__name__ == "Square":
+            my_ins = cls(10)
+
         my_ins.update(**dictionary)
+
         return my_ins
 
     # Load a file
