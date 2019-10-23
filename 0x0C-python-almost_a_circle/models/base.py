@@ -57,16 +57,14 @@ class Base:
         filename = cls.__name__ + ".json"
         new_list = []
 
-        with open(filename, "w") as fil:
-            if list_objs is None:
-                fil.write(new_list)
+        if list_objs is not None:
 
             for x in list_objs:
                 new_list.append(x.to_dictionary())
 
-            json_str = ""
             json_str = cls.to_json_string(new_list)
 
+        with open(filename, "w") as fil:
             fil.write(json_str)
 
     # Json string to dict
