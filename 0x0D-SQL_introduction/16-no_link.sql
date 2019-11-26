@@ -1,4 +1,4 @@
 -- Say Name
 SELECT score, name FROM second_table
 ORDER BY score DESC, name ASC
-WHERE IS NOT NULL;
+WHERE name IS NOT NULL;
