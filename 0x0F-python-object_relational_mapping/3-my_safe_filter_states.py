@@ -12,11 +12,9 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     # Return the cursor
     cursor = db.cursor()
-    # String with the query of mysql
-    query = "SELECT * FROM states WHERE name LIKE BINARY '{:s}'\
-    ORDER BY id ASC;".format(sys.argv[4])
-    # Execute the query and return to the cursor
-    cursor.execute(query)
+    # Execute the query and return to the cursor also prevent sql inj
+    cursor.execute("SELECT * FROM states\
+    WHERE name LIKE %s ORDER BY id ASC;", (sys.argv[4],))
     # Store the column of the tables
     tables = cursor.fetchall()
     # Print the column of the tables
