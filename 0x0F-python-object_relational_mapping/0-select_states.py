@@ -23,4 +23,4 @@ if __name__ == "__main__":
         print (column)
 
     cursor.close();
-    db.close();x
+    db.close();
