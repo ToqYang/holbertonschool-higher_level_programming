@@ -9,15 +9,19 @@ if __name__ == "__main__":
                          port=3306,
                          user=sys.argv[1],
                          passwd=sys.argv[2],
-                         db=sys.argv[3])
+                         db=sys.argv[3],
+                         charset="utf8")
     # Return the cursor
     cursor = db.cursor()
     # String with the query of mysql
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC;"
+    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC;"
     # Execute the query and return to the cursor
     cursor.execute(query)
     # Store the column of the tables
     tables = cursor.fetchall()
     # Print the column of the tables
     for column in tables:
-        print (column)
+        print(column)
+
+    cursor.close()
+    db.close()
