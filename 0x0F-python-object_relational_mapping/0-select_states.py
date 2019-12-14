@@ -13,7 +13,7 @@ if __name__ == "__main__":
     # Return the cursor
     cursor = db.cursor()
     # String with the query of mysql
-    query = "SELECT * FROM states ORDER BY states.id ASC;"
+    query = "SELECT * FROM states ORDER BY id ASC;"
     # Execute the query and return to the cursor
     cursor.execute(query)
     # Store the column of the tables
