@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Import the sys.arg """
 import MySQLdb
-from sys import argv
+import sys
 
 if __name__ == "__main__":
     # Initializes method connect to the database
