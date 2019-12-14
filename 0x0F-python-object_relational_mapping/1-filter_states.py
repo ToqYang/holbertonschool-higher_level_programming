@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Import the sys.arg """
 import MySQLdb
-import sys
+from sys import argv
 
 if __name__ == "__main__":
     # Initializes method connect to the database
@@ -9,12 +9,11 @@ if __name__ == "__main__":
                          port=3306,
                          user=sys.argv[1],
                          passwd=sys.argv[2],
-                         db=sys.argv[3],
-                         charset="utf8")
+                         db=sys.argv[3])
     # Return the cursor
     cursor = db.cursor()
     # String with the query of mysql
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC;"
+    query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC;"
     # Execute the query and return to the cursor
     cursor.execute(query)
     # Store the column of the tables
