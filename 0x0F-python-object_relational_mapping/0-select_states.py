@@ -9,7 +9,8 @@ if __name__ == "__main__":
                          port=3306,
                          user=sys.argv[1],
                          passwd=sys.argv[2],
-                         db=sys.argv[3])
+                         db=sys.argv[3],
+                         charset="utf8")
     # Return the cursor
     cursor = db.cursor()
     # String with the query of mysql
@@ -20,7 +21,7 @@ if __name__ == "__main__":
     tables = cursor.fetchall()
     # Print the column of the tables
     for column in tables:
-        print (column)
+        print(column)
 
-    cursor.close();
-    db.close();
+    cursor.close()
+    db.close()
