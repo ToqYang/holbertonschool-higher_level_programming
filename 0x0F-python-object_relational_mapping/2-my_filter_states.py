@@ -14,11 +14,14 @@ if __name__ == "__main__":
     cursor = db.cursor()
     # String with the query of mysql
     query = "SELECT * FROM states WHERE name='" + sys.argv[4] +\
-            "' ORDER BY states.id ASC;"
+            "' ORDER BY id ASC;"
     # Execute the query and return to the cursor
     cursor.execute(query)
     # Store the column of the tables
     tables = cursor.fetchall()
     # Print the column of the tables
     for column in tables:
-        print (column)
+        print(column)
+
+    cursor.close()
+    db.close()
