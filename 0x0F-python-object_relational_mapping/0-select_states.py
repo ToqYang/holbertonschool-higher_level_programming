@@ -21,3 +21,6 @@ if __name__ == "__main__":
     # Print the column of the tables
     for column in tables:
         print (column)
+
+    cursor.close();
+    db.close();x
