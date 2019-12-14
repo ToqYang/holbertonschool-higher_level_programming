@@ -13,8 +13,8 @@ if __name__ == "__main__":
     # Return the cursor
     cursor = db.cursor()
     # String with the query of mysql
-    query = "SELECT * FROM states WHERE name='" + sys.argv[4] +\
-            "' ORDER BY id ASC;"
+    query = "SELECT * FROM states WHERE name='{:s}'\
+    ORDER BY id ASC;".format(sys.argv[4])
     # Execute the query and return to the cursor
     cursor.execute(query)
     # Store the column of the tables
