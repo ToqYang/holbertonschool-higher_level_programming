@@ -16,4 +16,7 @@ if __name__ == "__main__":
     mySession = Session()
     myquer = mySession.query(State).order_by(State.id).first()
 
-    print("{}: {}".format(myquer.id, myquer.name))
+    if not myquer:
+        print("Nothing")
+    else:
+        print("{}: {}".format(myquer.id, myquer.name))
