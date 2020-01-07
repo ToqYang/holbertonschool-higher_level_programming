@@ -1,3 +1,3 @@
 #!/bin/bash
-# cURL body size
-curl -s $1 | wc -c
+# cURL JSON
+curl -s -X POST -H "Content-Type: application/json" -d @$2 $1
