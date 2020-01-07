@@ -1,3 +1,3 @@
 #!/bin/bash
-# cURL body size
-curl -s $1 | wc -c
+# Only status code 
+curl -s -o /dev/null -w '%{http_code}' $1
