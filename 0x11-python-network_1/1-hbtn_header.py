@@ -7,4 +7,4 @@ urlhol = sys.argv[1]
 
 req = urllib.request.Request(urlhol)
 with urllib.request.urlopen(req) as res:
-    print(res.getheader('X-Request-Id'))
+    print(res.headers.get('X-Request-Id'))
