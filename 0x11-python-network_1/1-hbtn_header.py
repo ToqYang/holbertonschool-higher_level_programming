@@ -3,8 +3,6 @@
 import urllib.request
 import sys
 
-urlhol = sys.argv[1]
 
-req = urllib.request.Request(urlhol)
-with urllib.request.urlopen(req) as res:
-    print(res.headers.get('X-Request-Id'))
+with urllib.request.urlopen(sys.argv[1]) as res:
+    print(res.getheader('X-Request-Id'))
