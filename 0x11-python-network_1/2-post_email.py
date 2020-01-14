@@ -9,7 +9,6 @@ if __name__ == "__main__":
     url = sys.argv[1]
     values = {}
     values['email'] = sys.argv[2]
-    
 
     data = urllib.parse.urlencode(values)
     data = data.encode('utf-8')
