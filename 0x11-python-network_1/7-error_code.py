@@ -8,6 +8,7 @@ if __name__ == "__main__":
 
     try:
         res = requests.get(sys.argv[1])
-        print(res)
+        res.raise_for_status()
+        print(res.text)
     except HTTPError as e:
-        print("Error code: {}".format(e))
+        print("Error code: {}".format(e.response.status_code))
