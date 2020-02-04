@@ -11,6 +11,6 @@ if (myArgc <= 2 || isNaN(num)) {
   console.log('Missing size');
 } else if (myArgc === 3) {
   for (let i = 0; i < num; ++i) {
-    console.log('x'.repeat(num));
+    console.log('X'.repeat(num));
   }
 }
