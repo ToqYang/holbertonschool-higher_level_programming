@@ -3,17 +3,10 @@
    Print the value passed
    of the first argument
 */
-let idx = 0;
-let value = 'Holberton';
-process.argv.forEach((val, index) => {
-  if (index === 2) {
-    value = val;
-  }
-  ++idx;
-});
-
-if (idx === 3) {
-  console.log(value);
+let len = 0;
+len = process.argv[2];
+if (len) {
+  console.log(len);
 } else {
   console.log('No argument');
 }
