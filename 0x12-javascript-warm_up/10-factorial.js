@@ -2,10 +2,15 @@
 /*
   Print the factorial of a number
 */
+function fact (x) {
+  if (x === 0) {
+    return 1;
+  }
+  return x * fact(x - 1);
+}
+
 let myArgc = 0;
 let num = 0;
-let num2 = 2;
-let fact = 0;
 
 myArgc = process.argv.length;
 
@@ -17,12 +22,6 @@ if (myArgc <= 2) {
   if (isNaN(num)) {
     console.log(1);
   } else {
-    fact = num;
-    while (num2 > 1) {
-      --num;
-      num2 = num;
-      fact = fact * num2;
-    }
-    console.log(fact);
+    console.log(fact(num));
   }
 }
