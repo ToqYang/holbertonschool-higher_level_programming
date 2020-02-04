@@ -1,5 +1,7 @@
 #!/usr/bin/node
-// Arguments
+/*
+   Arguments used with length
+*/
 let myArgv = 0;
 myArgv = process.argv.length;
 if (myArgv <= 2) {
