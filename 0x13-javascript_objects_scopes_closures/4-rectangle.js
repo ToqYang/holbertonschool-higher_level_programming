@@ -4,7 +4,7 @@
  Defining two attributes width and height
  If the number are negative or 0 the object is undefined
  Add method print
-
+ Add methods print, rotate, double
 */
 module.exports = class Rectangle {
   constructor (w, h) {
