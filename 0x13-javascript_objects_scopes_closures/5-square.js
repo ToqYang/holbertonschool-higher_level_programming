@@ -1,10 +1,7 @@
 #!/usr/bin/node
 /*
- Defining Rectangle class
- Defining two attributes width and height
- If the number are negative or 0 the object is undefined
- Add method print
- Add methods print, rotate, double
+  Defining Square class
+  inheritance from the Rectangle class
 */
 const Rectangle = require('./4-rectangle');
 
