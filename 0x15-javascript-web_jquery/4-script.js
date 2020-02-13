@@ -5,6 +5,12 @@
 */
 $(document).ready(function () {
   $('div#toggle_header').click(function () {
-    $('header').toggleClass('red');
+    if ($('header'.hasClass('red'))) {
+      $('header').toggleClass('green');
+    } else if ($('header'.hasClass('green'))) {
+      $('header').toggleClass('red');
+    } else if ($('header').is(':empty')) {
+      $('header').toggleClass('red');
+    }
   });
 });
