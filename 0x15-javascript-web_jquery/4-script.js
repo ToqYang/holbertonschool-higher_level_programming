@@ -12,7 +12,7 @@ $(document).ready(function () {
       $("header").removeClass("green");
       $("header").addClass("red");
     } else if ($('header').is(':empty')) {
-      $('header').toggleClass('red');
+      $("header").addClass("red");
     }
   });
 });
