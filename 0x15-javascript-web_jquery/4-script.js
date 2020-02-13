@@ -5,7 +5,6 @@
 */
 $(document).ready(function () {
   $('div#toggle_header').click(function () {
-    $(".red").switchClass("red","green");
-    $(".green").switchClass("green","red");
+    $('header').toggleClass('red');
   });
 });
