@@ -6,9 +6,11 @@
 $(document).ready(function () {
   $('div#toggle_header').click(function () {
     if ($('header').hasClass('red')) {
-      $('header').toggleClass('green');
+      $("#div1").removeClass("red");
+      $("#div1").addClass("green");
     } else if ($('header').hasClass('green')) {
-      $('header').toggleClass('red');
+      $("#div1").removeClass("green");
+      $("#div1").addClass("red");
     } else if ($('header').is(':empty')) {
       $('header').toggleClass('red');
     }
