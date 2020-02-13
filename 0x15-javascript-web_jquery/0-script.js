@@ -4,4 +4,4 @@
   to #FF0000 No jquery
 */
 const element = document.querySelector('header');
-element.style.backgroundColor('#FF0000');
+element.style.color = '#FF0000';
