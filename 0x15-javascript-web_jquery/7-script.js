@@ -5,6 +5,6 @@
 */
 $(document).ready(function () {
     $.getJSON('https://swapi.co/api/people/5/?format=json', function (result) {
-        $('header').text(result.name);
+        $('div#character').text(result.name);
       });
     });
