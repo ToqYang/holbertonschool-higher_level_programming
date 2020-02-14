@@ -1,6 +1,5 @@
 /*
-  Verify if the DOM is charged
-  and after change the color
+  Add listener api to translate
 */
 document.addEventListener('DOMContentLoaded', function () {
   $('input#btn_translate').click(function () {
@@ -9,15 +8,5 @@ document.addEventListener('DOMContentLoaded', function () {
     $.getJSON(url, function (result) {
       $('div#hello').text(result.hello);
     });
-  });
-
-  $(document).keypress(function (e) {
-    if (e.which == 13) {
-      let code = $('input#language_code').val();
-      let url = 'https://fourtonfish.com/hellosalut/?lang=' + code;
-      $.getJSON(url, function (result) {
-        $('div#hello').text(result.hello);
-      });
-    }
   });
 });
